@@ -1,15 +1,20 @@
-import { Button, Rows, Text } from "@canva/app-ui-kit";
-import { addNativeElement } from "@canva/design";
+import { Button, Rows, Text, VideoCard } from "@canva/app-ui-kit";
+import { addNativeElement, addPage } from "@canva/design";
 import * as React from "react";
 import styles from "styles/components.css";
 
 export const App = () => {
+  const ref = "ref"
   const onClick = () => {
     addNativeElement({
       type: "TEXT",
       children: ["Hello world!"],
     });
+
+    
   };
+
+ 
 
   return (
     <div className={styles.scrollContainer}>
@@ -21,6 +26,7 @@ export const App = () => {
         <Button variant="primary" onClick={onClick} stretch>
           Do something cool
         </Button>
+        <Button variant="secondary" onClick={onClick}>Secondary</Button>
       </Rows>
     </div>
   );
